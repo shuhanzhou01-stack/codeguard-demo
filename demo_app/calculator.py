@@ -6,6 +6,10 @@ def subtract(a: float, b: float) -> float:
     return a - b
 
 
+def multiply(a: float, b: float) -> float:
+    return a * b
+
+
 def calculate_discount(price: float, discount_percent: float) -> float:
     if price < 0:
         raise ValueError("price must be greater than or equal to zero")
