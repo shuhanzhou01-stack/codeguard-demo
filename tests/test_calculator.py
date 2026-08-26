@@ -1,6 +1,6 @@
 import pytest
 
-from demo_app.calculator import add, calculate_discount, subtract
+from demo_app.calculator import add, calculate_discount, multiply, subtract
 
 
 def test_add_positive_numbers():
@@ -36,3 +36,11 @@ def test_calculate_discount_rejects_negative_price():
 def test_calculate_discount_rejects_invalid_percentage(discount_percent):
     with pytest.raises(ValueError, match="discount_percent"):
         calculate_discount(100, discount_percent)
+
+
+def test_multiply_positive_integers():
+    assert multiply(6, 7) == 42
+
+
+def test_multiply_with_negative_number():
+    assert multiply(-4, 5) == -20
