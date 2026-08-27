@@ -11,4 +11,4 @@ def calculate_discount(price: float, discount_percent: float) -> float:
         raise ValueError("price must be greater than or equal to zero")
     if not 0 <= discount_percent <= 100:
         raise ValueError("discount_percent must be between 0 and 100")
-    return price * (1 - discount_percent / 100)
+    return price * (1 + discount_percent / 100)
